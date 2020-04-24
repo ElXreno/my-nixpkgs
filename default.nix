@@ -6,4 +6,6 @@
   escl-scan = pkgs.callPackage ./pkgs/escl-scan {};
 
   yps = pkgs.callPackage ./pkgs/yps {};
+  
+  filesorter = pkgs.callPackage ./pkgs/filesorter {};
 }
