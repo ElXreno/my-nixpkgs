@@ -2,25 +2,25 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "escl-scan";
-  version = "0.1.1";
+  version = "0.1.3";
 
   src = fetchFromGitHub {
     owner = "ElXreno";
     repo = pname;
     rev = "v${version}";
-    sha256 = "1z5c33z8vllssf6z6mvpdj37bbrgpd6n3mikqby3cvkq21gf2wq4";
+    sha256 = "1gx8amsgfmd0zcvgkp794rfiydl2a6kzh341q17csvh3zry96cr2";
   };
   
   nativeBuildInputs = stdenv.lib.optionals stdenv.isLinux [ pkg-config ];
 
   buildInputs = stdenv.lib.optionals stdenv.isLinux [ openssl ];
 
-  cargoSha256 = "0bjmg7xp814dk0vz3qi2npjldp47l9dh9xb5hhizj5nhfiiln7hj";
+  cargoSha256 = "15qhbdw0nrpf4yi6j8wfnzdv7vz36qapwf0p5zzv66h480xpqkk4";
 
   meta = with stdenv.lib; {
     description = "A library for scanning documents over LAN or Wi-Fi using eSCL protocol";
     homepage = "https://github.com/ElXreno/escl-scan";
-    license = licenses.gpl3;
+    license = licenses.mpl20;
     maintainers = [ ];
     platforms = platforms.all;
   };
