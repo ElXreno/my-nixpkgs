@@ -1,13 +1,14 @@
 { pkgs ? import <nixpkgs> {} }:
 
+with pkgs;
 {
-  zswap-cli = pkgs.callPackage ./pkgs/zswap-cli {};
+  zswap-cli = callPackage ./pkgs/zswap-cli {};
 
-  escl-scan = pkgs.callPackage ./pkgs/escl-scan {};
+  escl-scan = callPackage ./pkgs/escl-scan {};
 
-  yps = pkgs.callPackage ./pkgs/yps {};
+  yps = callPackage ./pkgs/yps {};
   
-  filesorter = pkgs.callPackage ./pkgs/filesorter {};
+  filesorter = callPackage ./pkgs/filesorter {};
   
-  kernelPatches = pkgs.callPackage ./pkgs/kernelPatches/patches.nix {};
+  kernelPatches = callPackage ./pkgs/kernelPatches/patches.nix {};
 }
