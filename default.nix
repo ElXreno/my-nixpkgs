@@ -8,4 +8,6 @@
   yps = pkgs.callPackage ./pkgs/yps {};
   
   filesorter = pkgs.callPackage ./pkgs/filesorter {};
+  
+  kernelPatches = pkgs.callPackage ./pkgs/kernelPatches/patches.nix {};
 }
